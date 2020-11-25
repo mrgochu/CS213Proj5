@@ -22,10 +22,10 @@
         app:layout_constraintVertical_bias="0.102" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/met"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launch2ndActivity"
+        android:onClick="metAction"
         android:text="The Metropolitan Museum of Art"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,10 +34,10 @@
         app:layout_constraintVertical_bias="0.245" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/moma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launch2ndActivity"
+        android:onClick="momaAction"
         android:text="The Museum of Modern Art"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,10 +47,10 @@
         app:layout_constraintVertical_bias="0.376" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/american"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launch2ndActivity"
+        android:onClick="americanAction"
         android:text="American Museum of Natural History"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,10 +58,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/guggenheim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launch2ndActivity"
+        android:onClick="guggenheimAction"
         android:text="Solomon R. Guggenheim Museum"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
