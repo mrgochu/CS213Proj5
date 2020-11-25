@@ -18,26 +18,29 @@ public class MainActivity extends AppCompatActivity {
     public void launch2ndActivity(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
-
     }
 
     public void metAction(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
+        ((Museum) this.getApplication()).setSelectedMuseum(0);
         startActivity(intent);
     }
 
     public void momaAction(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
+        ((Museum) this.getApplication()).setSelectedMuseum(1);
         startActivity(intent);
     }
 
     public void americanAction(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
+        ((Museum) this.getApplication()).setSelectedMuseum(2);
         startActivity(intent);
     }
 
     public void guggenheimAction(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
+        ((Museum) this.getApplication()).setSelectedMuseum(3);
         startActivity(intent);
     }
 }

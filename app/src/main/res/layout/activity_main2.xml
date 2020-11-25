@@ -7,12 +7,13 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/museumName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Museum Name"
+        android:textAlignment="center"
         android:textColor="#4BC350"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,11 +42,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/adultPrice"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/seniorPrice"
         android:layout_width="71dp"
         android:layout_height="31dp"
         android:text="$"
@@ -64,12 +65,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/studentPrice"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/studentPrice"
         android:layout_width="71dp"
         android:layout_height="31dp"
         android:text="$"
@@ -88,12 +89,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/seniorPrice"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.567" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/adultPrice"
         android:layout_width="71dp"
         android:layout_height="31dp"
         android:text="$"
@@ -125,7 +126,7 @@
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/seniorPrice"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -139,7 +140,7 @@
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintEnd_toStartOf="@+id/studentPrice"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -154,7 +155,7 @@
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/adultPrice"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -173,7 +174,7 @@
         app:layout_constraintVertical_bias="0.921" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/rawTicketPrice"
         android:layout_width="313dp"
         android:layout_height="45dp"
         android:ems="10"
