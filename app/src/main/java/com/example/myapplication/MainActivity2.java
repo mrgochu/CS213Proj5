@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -110,4 +112,29 @@ public class MainActivity2 extends AppCompatActivity {
         sp3.setAdapter(arrayAdapter);
     }
 
+    public void goWebsite(View view) {
+        int selectedMuseum = ((Museum) this.getApplication()).getSelectedMuseum();
+        switch(selectedMuseum){
+            case 0: {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/")));
+                break;
+            }
+
+            case 1: {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.moma.org/")));
+                break;
+            }
+
+            case 2: {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amnh.org/")));
+                break;
+            }
+
+            case 3: {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.guggenheim.org/")));
+                break;
+            }
+        }
+
+    }
 }

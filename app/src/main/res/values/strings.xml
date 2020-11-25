@@ -3,4 +3,9 @@
     <string name="name">Name</string>
     <string name="MainActivity2" />
     <string name="nyc_museum_tickets">NYC Museum Tickets</string>
+    <string name="museum_name">Museum Name</string>
+    <string name="museumimage">museumImage</string>
+    <string name="dollarSign1">$</string>
+    <string name="dollarSign2">$</string>
+    <string name="dollarSign3">$</string>
 </resources>
