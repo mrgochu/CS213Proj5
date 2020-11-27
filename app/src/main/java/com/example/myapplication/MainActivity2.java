@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +26,13 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        Context context = getApplicationContext();
+        CharSequence text = "Maximum of 5 tickets for each!";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
         ImageView imageView = (ImageView) findViewById(R.id.museumPic);
         int selectedMuseum = ((Museum) this.getApplication()).getSelectedMuseum();
         setUpSpinners();
@@ -124,9 +132,7 @@ public class MainActivity2 extends AppCompatActivity {
                 Spinner sp = (Spinner) findViewById(R.id.spinner);
                 Spinner sp2 = (Spinner) findViewById(R.id.spinner2);
                 Spinner sp3 = (Spinner) findViewById(R.id.spinner3);
-                Toast toast = Toast.makeText(getApplicationContext(), "Reason can not be blank", Toast.LENGTH_LONG);
-                toast.setMargin(50, 100);
-                toast.show();
+
                 sp.getSelectedItem();
                 int adultCount = Integer.parseInt(sp.getSelectedItem()+"");
                 int seniorCount = Integer.parseInt(sp2.getSelectedItem()+"");
