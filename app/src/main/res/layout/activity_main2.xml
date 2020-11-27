@@ -112,18 +112,21 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="sales tax"
+        android:text="@string/sales_tax"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintVertical_bias="0.836"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor"
+        android:enabled="false"/>
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="71dp"
         android:layout_height="31dp"
-        android:text="senior"
+        android:text="@string/senior"
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,7 +140,7 @@
         android:id="@+id/textView11"
         android:layout_width="71dp"
         android:layout_height="31dp"
-        android:text="student"
+        android:text="@string/student"
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -152,7 +155,7 @@
         android:layout_width="71dp"
         android:layout_height="31dp"
         android:layout_marginStart="32dp"
-        android:text="adult"
+        android:text="@string/adult"
         android:textColor="#03A9F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -167,12 +170,15 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="ticket total"
+        android:text="@string/ticket_total"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.921"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor"
+        android:enabled="false"/>
 
     <EditText
         android:id="@+id/rawTicketPrice"
@@ -180,10 +186,13 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="ticket price"
+        android:text="@string/ticket_price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.753"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor"
+        android:enabled="false"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

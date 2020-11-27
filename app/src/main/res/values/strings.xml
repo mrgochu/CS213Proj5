@@ -8,4 +8,10 @@
     <string name="dollarSign1">$</string>
     <string name="dollarSign2">$</string>
     <string name="dollarSign3">$</string>
+    <string name="sales_tax">sales tax</string>
+    <string name="senior">senior</string>
+    <string name="student">student</string>
+    <string name="adult">adult</string>
+    <string name="ticket_total">ticket total</string>
+    <string name="ticket_price">ticket price</string>
 </resources>
