@@ -17,8 +17,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
-
+// This class takes care of the 2nd Activities, where the ticket calculator and respective images and museum names are displayed.
 public class MainActivity2 extends AppCompatActivity {
     final int[][] PRICE = { {25, 17, 12}, {25, 18, 14}, {23, 18, 18},{23, 18, 18} };
     final double NY_TAX = 8.875;
@@ -27,13 +28,16 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+
+        // Toast implementation
         Context context = getApplicationContext();
         CharSequence text = "Maximum of 5 tickets for each!";
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
-        ImageView imageView = (ImageView) findViewById(R.id.museumPic);
+        // Setting image type for respective museums
+        ImageView imageView = findViewById(R.id.museumPic);
         int selectedMuseum = ((Museum) this.getApplication()).getSelectedMuseum();
         setUpSpinners();
 
@@ -57,56 +61,62 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
+    // Implementation for Metropolitan Museum
     public void setForMetropolitan(){
-        TextView museumName = (TextView) findViewById(R.id.museumName);
-        ImageView img = (ImageView) findViewById(R.id.museumPic);
-        Spinner sp = (Spinner) findViewById(R.id.spinner);
-        museumName.setText("The Metropolitan Museum of Art");
+        TextView museumName = findViewById(R.id.museumName);
+        ImageView img = findViewById(R.id.museumPic);
+        Spinner sp = findViewById(R.id.spinner);
+        museumName.setText(getString(R.string.metMuseum));
         img.setImageResource(R.drawable.met);
         setTicketPrice(PRICE[0][0],PRICE[0][1],PRICE[0][2]);
     }
 
+    // Implementation for Museum of Modern Art
     public void setForModern(){
-        TextView museumName = (TextView) findViewById(R.id.museumName);
-        ImageView img = (ImageView) findViewById(R.id.museumPic);
-        Spinner sp = (Spinner) findViewById(R.id.spinner);
-        museumName.setText("The Museum of Modern Art");
+        TextView museumName = findViewById(R.id.museumName);
+        ImageView img = findViewById(R.id.museumPic);
+        Spinner sp = findViewById(R.id.spinner);
+        museumName.setText(getString(R.string.momaMuseum));
         img.setImageResource(R.drawable.moma);
         setTicketPrice(PRICE[1][0],PRICE[1][1],PRICE[1][2]);
     }
 
+    // Implementation for American Museum of Natural History
     public void setForHistory(){
-        TextView museumName = (TextView) findViewById(R.id.museumName);
-        ImageView img = (ImageView) findViewById(R.id.museumPic);
-        Spinner sp = (Spinner) findViewById(R.id.spinner);
-        museumName.setText("American Museum of Natural History");
+        TextView museumName = findViewById(R.id.museumName);
+        ImageView img = findViewById(R.id.museumPic);
+        Spinner sp = findViewById(R.id.spinner);
+        museumName.setText(getString(R.string.americanMuseum));
         img.setImageResource(R.drawable.naturalhistorymuseum);
         setTicketPrice(PRICE[2][0],PRICE[2][1],PRICE[2][2]);
     }
 
+    // Implementation for Guggenheim
     public void setForGug(){
-        TextView museumName = (TextView) findViewById(R.id.museumName);
-        ImageView img = (ImageView) findViewById(R.id.museumPic);
-        Spinner sp = (Spinner) findViewById(R.id.spinner);
-        museumName.setText("Solomon R. Guggenheim Museum");
+        TextView museumName = findViewById(R.id.museumName);
+        ImageView img = findViewById(R.id.museumPic);
+        Spinner sp = findViewById(R.id.spinner);
+        museumName.setText(getString(R.string.guggenheimMuseum));
         img.setImageResource(R.drawable.guggenheim);
         setTicketPrice(PRICE[3][0],PRICE[3][1],PRICE[3][2]);
     }
 
+    // Method for setting Ticket Prices
     public void setTicketPrice(int adult, int senior, int student){
-        TextView adultPrice = (TextView) findViewById(R.id.adultPrice);
-        TextView seniorPrice = (TextView) findViewById(R.id.seniorPrice);
-        TextView studentPrice = (TextView) findViewById(R.id.studentPrice);
+        TextView adultPrice = findViewById(R.id.adultPrice);
+        TextView seniorPrice = findViewById(R.id.seniorPrice);
+        TextView studentPrice = findViewById(R.id.studentPrice);
 
-        adultPrice.setText("$ "+ adult);
-        seniorPrice.setText("$ "+ senior);
-        studentPrice.setText("$ "+ student);
+        adultPrice.setText(getString(R.string.adultPrice, adult));
+        seniorPrice.setText(getString(R.string.seniorPrice, senior));
+        studentPrice.setText(getString(R.string.studentPrice, student));
     }
 
+    // Spinners set so MAX is 5 tickets for each age group
     public void setUpSpinners(){
-        Spinner sp = (Spinner) findViewById(R.id.spinner);
-        Spinner sp2 = (Spinner) findViewById(R.id.spinner2);
-        Spinner sp3 = (Spinner) findViewById(R.id.spinner3);
+        Spinner sp = findViewById(R.id.spinner);
+        Spinner sp2 = findViewById(R.id.spinner2);
+        Spinner sp3 = findViewById(R.id.spinner3);
         ArrayList<String> tickets = new ArrayList<>();
         tickets.add(0+"");
         tickets.add(1+"");
@@ -114,7 +124,7 @@ public class MainActivity2 extends AppCompatActivity {
         tickets.add(3+"");
         tickets.add(4+"");
         tickets.add(5+"");
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, tickets);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, tickets);
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         sp.setAdapter(arrayAdapter);
         sp2.setAdapter(arrayAdapter);
@@ -123,15 +133,15 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                EditText rawPrice = (EditText) findViewById(R.id.rawTicketPrice);
+                EditText rawPrice = findViewById(R.id.rawTicketPrice);
 
-                EditText salesTax = (EditText) findViewById(R.id.salesTax);
+                EditText salesTax = findViewById(R.id.salesTax);
 
-                EditText totalPrice = (EditText) findViewById(R.id.totalPrice);
+                EditText totalPrice = findViewById(R.id.totalPrice);
 
-                Spinner sp = (Spinner) findViewById(R.id.spinner);
-                Spinner sp2 = (Spinner) findViewById(R.id.spinner2);
-                Spinner sp3 = (Spinner) findViewById(R.id.spinner3);
+                Spinner sp = findViewById(R.id.spinner);
+                Spinner sp2 = findViewById(R.id.spinner2);
+                Spinner sp3 = findViewById(R.id.spinner3);
 
                 sp.getSelectedItem();
                 int adultCount = Integer.parseInt(sp.getSelectedItem()+"");
@@ -142,9 +152,9 @@ public class MainActivity2 extends AppCompatActivity {
                         PRICE[selectedMuseum][1] * seniorCount +
                         PRICE[selectedMuseum][2] * studentCount;
 
-                rawPrice.setText("ticket price : " + ticketPrice);
-                salesTax.setText("sales tax : " + String.format("%.2f",ticketPrice * NY_TAX / 100));
-                totalPrice.setText("ticket total : " + String.format("%.2f",ticketPrice * (NY_TAX / 100 + 1)));
+                rawPrice.setText(getString(R.string.ticket_price, ticketPrice));
+                salesTax.setText(getString(R.string.sales_tax, String.format(Locale.US, "%.2f",ticketPrice * NY_TAX / 100)));
+                totalPrice.setText(getString(R.string.ticket_total,  String.format(Locale.US, "%.2f",ticketPrice * (NY_TAX / 100 + 1))));
             }
 
             @Override
@@ -157,6 +167,7 @@ public class MainActivity2 extends AppCompatActivity {
         sp3.setOnItemSelectedListener(oc);
     }
 
+    // Implementation of directing to website from image selected
     public void goWebsite(View view) {
         int selectedMuseum = ((Museum) this.getApplication()).getSelectedMuseum();
         switch(selectedMuseum){

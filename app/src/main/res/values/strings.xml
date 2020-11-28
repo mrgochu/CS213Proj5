@@ -8,10 +8,17 @@
     <string name="dollarSign1">$</string>
     <string name="dollarSign2">$</string>
     <string name="dollarSign3">$</string>
-    <string name="sales_tax">sales tax</string>
+    <string name="sales_tax">sales tax: $%1$s</string>
     <string name="senior">senior</string>
     <string name="student">student</string>
     <string name="adult">adult</string>
-    <string name="ticket_total">ticket total</string>
-    <string name="ticket_price">ticket price</string>
+    <string name="ticket_total">ticket total: $%1$s</string>
+    <string name="ticket_price">ticket price: $%1$d</string>
+    <string name="metMuseum">Metropolitan Museum of Art</string>
+    <string name="momaMuseum">Museum of Modern Art</string>
+    <string name="americanMuseum">American Museum of Natural History</string>
+    <string name="guggenheimMuseum">Solomon R. Guggenheim Museum</string>
+    <string name="adultPrice">$%1$d</string>
+    <string name="seniorPrice">$%1$d</string>
+    <string name="studentPrice">$%1$d</string>
 </resources>
